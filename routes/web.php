@@ -11,35 +11,25 @@
 |
 */
 
-//when I get the address / I want you to return the vie
+/*
+	Conventions:
+	GET /projects (index) - All Projects
+	GET /projects/create (create) - Create a Project
+	GET /projects/IDOfProject (show) - A Project
+	POST /projects (store) - A Project
+	GET /projects/IDOfProject (edit) - A Project
+	PATCH /projects/IDOfProject (update) - A Project
+	DELETE /projects/IDOfProject (destroy) - A Project
+*/
+
 Route::get('/', 'PagesController@home');
+
 Route::get('/about', 'PagesController@about');
+
 Route::get('/contact', 'PagesController@contact');
+
 Route::get('/projects', 'ProjectsController@index');
-	//$tasks = [
-	//	'Go to the store',
-	//	'Go to the market',
-	//	'Go to work'
-	//];
 
-	//another way of doing it is
-	//return view('welcome')->with([
-	//	'foo' => 'bar',
-	//	'tasks' => [
-	//		'Go to the store',
-	//		'Go to the market',
-	//		'Go to work'
-	//	]
-	//]);
+Route::get('/projects/create', 'ProjectsController@create');
 
-	//we can pass variables like this:
-	//return view('welcome')->withTasks($tasks);
-
-    //return view('welcome', [
-    //	'tasks' => $tasks
-    	//passing direct value
-    	//'varName' => 'content'
-    	//passing request by url
-    	//'varReq' => request('title')
-    //]);
-//});
+Route::post('/projects', 'ProjectsController@store');
