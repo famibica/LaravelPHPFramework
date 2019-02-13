@@ -22,6 +22,10 @@
 	DELETE /projects/IDOfProject (destroy) - A Project
 */
 
+//We can substitute the below code, by:
+Route::resource('projects', 'ProjectsController');
+
+/*
 Route::get('/', 'PagesController@home');
 
 Route::get('/about', 'PagesController@about');
@@ -32,4 +36,14 @@ Route::get('/projects', 'ProjectsController@index');
 
 Route::get('/projects/create', 'ProjectsController@create');
 
+Route::get('/projects/{project}', 'ProjectsController@show'); //{project} is a wild card that receives the ID
+
 Route::post('/projects', 'ProjectsController@store');
+
+Route::get('/projects/{project}/edit', 'ProjectsController@edit'); //{project} is a wild card that receives the ID
+
+Route::patch('/projects/{project}', 'ProjectsController@update'); 
+
+Route::delete('/projects/{project}', 'ProjectsController@destroy'); 
+*/
+
