@@ -1,9 +1,9 @@
 @extends('layout')
 
-@section('title', 'My first Website')
+@section('title', 'Laravel Framework Test')
 
 @section('content')
-<h1>Homepage</h1>
+<h1 class="title">Homepage</h1>
 
 <ul>
     @foreach ($tasks as $task)
